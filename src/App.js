@@ -1,5 +1,6 @@
 import React from 'react'
 import GetDataFromHasura from './containers/Query'
+import AddProfile from './containers/Mutate'
 import { Router, Link } from 'react-static'
 import { hot } from 'react-hot-loader'
 //
@@ -25,6 +26,7 @@ const App = () => (
           <Routes />
         </div>
         <GetDataFromHasura />
+        <AddProfile />
       </div>
     </Router>
   </ApolloProvider>
