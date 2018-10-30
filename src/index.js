@@ -3,16 +3,16 @@ import ReactDOM from 'react-dom'
 
 // Your top level component
 import App from './App'
-
-import ApolloClient from 'apollo-boost';
+import client from './connectors/apollo'
 import gql from "graphql-tag";
 
 
 //Fetching Hasura with client.query:
 //----------------------------------
-const client = new ApolloClient({
-  uri: 'https://happypanda-hasura-playground.herokuapp.com/v1alpha1/graphql',
-})
+//This is not working in build time. only in dev server... So I am using the setup given by React-Static Apollo config
+// const client = new ApolloClient({
+//   uri: 'https://happypanda-hasura-playground.herokuapp.com/v1alpha1/graphql',
+// })
 
 client.query({
   query: gql`{profile { id name }}`
