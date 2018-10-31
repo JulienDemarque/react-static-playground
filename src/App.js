@@ -25,7 +25,7 @@ const App = () => (
         <div className="content">
           <Routes />
         </div>
-        <GetDataFromHasura />
+        <GetDataFromHasura keyword="ch" />
         <AddProfile />
       </div>
     </Router>
