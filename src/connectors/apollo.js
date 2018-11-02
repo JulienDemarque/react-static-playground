@@ -7,6 +7,7 @@ const client = new ApolloClient({
   link: new HttpLink({
     fetch,
     uri: 'https://happypanda-hasura-playground.herokuapp.com/v1alpha1/graphql',
+    headers: { 'X-Hasura-Access-Key': 'mysecretkey' },
   }),
   cache: new InMemoryCache(),
 })
